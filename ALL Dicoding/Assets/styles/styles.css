@@ -1,0 +1,339 @@
+/*
+	RULE terdiri dari	
+	baris pertama (footer) merupakan SELECTOR
+	baris bawahnya ditandai {} merupakan DECLARATION sebagai properti styling
+*/
+
+/*
+	Pada bagian CSS ada GROUP SELECTOR seperti h2
+	yang akan diterapkan ke semua format h2
+*/
+
+
+
+/*
+	Font mengikuti urutan dri yg terdepan dan itu harus tersedia secara umum, kalau tidak menggunakan @font-face yang dipanggil dari url
+*/
+ 
+@font-face
+{
+	font-family: "Dicoding Font";
+	src: url('FILE-FONT.TTF');
+}
+/*
+	Baru diterapkan pada bagian tertentu
+*/
+
+
+
+/*
+	Ini untuk memberikan box pada bagian naviagi atas
+*/
+nav
+{
+   background-color: #00a2c6;
+   padding: 5px;
+}
+
+
+/*
+	ini untuk memberikan menu navigasi 1 baris bagian atas tanpa adanya "bullet n numbering"
+*/
+nav li
+{
+	 display: inline;
+	 list-style-type: none;
+	 margin-right: 20px;
+}
+
+nav a
+{
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: white;
+}
+
+/*
+	Pseudo selector
+*/
+nav a:hover
+{
+  font-weight: bold;
+}
+
+
+/*
+	* merupakan universal selector yang menerapkan semua elemen
+*/
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+  font-family: sans-serif, Arial, Verdana;
+
+  margin: 0;
+  padding: 0;
+}
+
+main
+{
+  padding: 20px;
+
+  /*
+		Ini untuk menghindari adanya elemen yg mengisi ruang kosong krn elemen #content dan <aside> dianggap tidak ada
+  */
+  overflow: auto;
+}
+
+
+footer
+{
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/*
+	Float juga terdapat pada #content
+*/
+aside
+{
+  float: right;
+  width:25%;
+
+  padding-left: 20px;
+  position: sticky;
+}
+
+/*
+	Penerapan konten secara menyeluruh(semua)
+*/
+#content
+{
+  float: left;
+  width: 75%;
+}
+
+
+p
+{
+	font-family:"Dicoding Font";
+}
+
+
+h2, h1
+{
+    font-size: 1.5em;
+}
+
+/*
+	terdapat 2 selector h1 dan h2 sehingga dapat diterapkan dalam 2 kelompok itu
+	Font size em berarti 100% tanpa menggunakan spasi, jika 2em brarti ukurannya 2 kali font biasa, ukuran lain juga bisa sesuaikan Tabel
+*/
+ 
+
+h3
+{
+  color: #00a2c6;
+}
+
+
+
+/*
+	CSS berarti aliran jadi style terakhir yang akan ditampilkan jika memiliki selector yang sama
+	seperti berikut
+*/
+
+p
+{
+  color: black !important;
+}
+
+p
+{
+  color: blue;
+}
+
+/* untuk menghindari hal itu maka perlu menggunakan style !important bagian akhir nya */
+
+
+
+
+
+
+
+.warnahijau
+{
+	color: green;
+}
+/*
+	CLASS SELECTOR ini hanya menerapkan style tertentu sesuai link yang ditandai CLASS
+	Jadi hanya berlaku saja sebagai initial (ditandai titik tanpa spasi .warnahijau)
+*/
+
+
+
+.bold
+{
+	font-weight: bold;
+}
+/*
+	ketebalan font sesuai link CLASS
+*/
+
+
+
+.italic
+{
+	font-style: italic;
+}
+
+/*
+	postur font sesuai link CLASS
+*/
+
+
+
+.ln2em
+{
+	line-height: 2em;
+}
+
+/*
+	Jarak antar baris kalimat 2 kali tinggi huruf
+*/
+
+
+
+.textindent
+{
+	text-indent: 2em;
+}
+
+/*
+	Jarak yang menjorok pada baris pertama paragraf itu
+*/
+
+
+
+.textalign
+{
+	text-align: right;
+}
+
+/*
+	Rata paragraf tersebut (left, right, center, justify)
+*/
+
+
+
+.decor
+{
+	text-decoration: line-through;
+}
+
+/*
+	Menambahkan garis melintang pada text (underline, overline, line-through, none/ digunakan juka ingin menghilangkan tanda underline pada link text)
+*/
+
+
+
+.transform
+{
+	text-transform: capitalize;
+}
+
+/*
+	Ingin menyeting semua kata diawali huruf kapital
+*/
+
+
+.spacing
+{
+	letter-spacing: 4px;
+	word-spacing: 1.5em;
+}
+
+/*
+	memberikan spasi pada tiap huruf atau kata
+*/
+
+.shadow
+{
+	text-shadow: 4px 4px 5px #000000;
+}
+
+/*
+	bayangan teks ini memiliki value (horisontal, vertikal, blur, warna)
+*/
+
+
+
+/*
+	Memberikan class pada GAMBAR
+*/
+
+.featured-image
+{
+	width: 100%;
+	max-height: 300px;
+
+	/*
+		atribut object-fit untuk menampilkan semua gambar width 100%, object-position untuk gambar yg terpotong berada ditengah
+	*/
+	object-fit: cover;
+	object-position: center;
+}
+
+/*
+	Mmberikan class pada LOGO LAMBANG
+*/
+.profile img
+{
+	width: 200px;
+}
+
+
+/*
+	Membuat elemen ASIDE dengan atribut CLASS
+*/
+.profile header
+{
+	text-align: center;
+}
+
+
+/*
+	Membuat elemen sesuai classnya memiliki efek tertentu: jarak horisontal, jarah vertikal, blur, spread, warna. RGBA (ALFA/ Transparan)
+	Border radius memberikan efek tumpul pada corner nya
+	Boder memberikan kotakan bingkai: width, putus2 (solid, dotted, double, groove), warna
+*/
+.card
+{
+  box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 100%);
+  border-radius: 50px;
+  padding: 20px;
+  margin-top: 50px;
+  border: 4px dotted #000000;
+}
+
+.jumbotron
+{
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+
+
+

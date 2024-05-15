@@ -1,0 +1,9 @@
+html, body {
+    @include reset;
+    overflow-x: hidden;
+    min-width: 280px;
+    font-family: $first-font-family;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
